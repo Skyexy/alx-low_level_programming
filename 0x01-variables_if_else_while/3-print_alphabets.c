@@ -10,7 +10,8 @@ int main(void)
 	char a = 'a';
 	char b = 'A';
 	int num = 1;
-	while (num <= 54)
+
+	while (num <= 52)
 	{
 		if (num <= 26)
 		{
@@ -22,6 +23,6 @@ int main(void)
 		}
 		num++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
