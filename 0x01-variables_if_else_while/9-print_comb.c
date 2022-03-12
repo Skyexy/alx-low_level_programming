@@ -5,18 +5,19 @@
 *
 *Return: 0 for sucess
 */
-int main()
+int main(void)
 {
 	int a = 0;
-	
-	putchar(a + '0')
-	while (a < 10)
+
+	for (; a < 10;)
 	{
-		a++;
-		putchar(',')
 		putchar(a + '0');
-		putchar(' ');
-		
+		if (a != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		a++;
 	}
-	return 0;
+	return (0);
 }
