@@ -3,7 +3,7 @@
 /**
  * main - iponme
  *
- * Process: 0 sucess
+ * Return: 0 sucess
  *
  */
 
