@@ -10,9 +10,9 @@ int main(void)
 	int a = 1;
 	char b = 'a';
 
-	for (a <= 16)
+	while (a <= 16)
 	{
-		if (a <= 10)
+		if (a < 10)
 		{
 			putchar(a + '0');
 		}
@@ -23,5 +23,6 @@ int main(void)
 		}
 		a++;
 	}
+	putchar('\n');
 	return (0);
 }
