@@ -1,17 +1,18 @@
 #include <stdio.h>
 
 /**
-* main - me
+* main - me op in pp
 *
-* return: Always 0 (success)
+* Return: Always 0 (success)
 */
-int main()
+int main(void)
 {
-  char a = 'z';
-  for ('z' >= 'a')
-  {
-    putchar(a);
-    a--;
-  }
-  return 0;
+	char a = 'z';
+
+	while (a >= 'a')
+	{
+		putchar(a);
+		a--;
+	}
+	return (0);
 }
