@@ -1,6 +1,6 @@
-#include "main.h"
 #include <time.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * main -Positive anything is better than negative nothing
