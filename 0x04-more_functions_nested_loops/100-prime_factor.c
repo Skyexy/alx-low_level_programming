@@ -9,18 +9,16 @@
  */
 int main(void)
 {
-	long c;
-	long j;
+	int c;
 	long num = 612852475143;
 
-	for (c = 0; c < num; c++)
+	for (c = (int) sqrt(num); c < 2; c++)
 	{
 		if (num % c == 0)
 		{
-			j = c;
-			num = num / c;
+			printf("%d\n", c);
+			break;
 		}
 	}
-	printf("%ld\n", j);
 	return (0);
 }
