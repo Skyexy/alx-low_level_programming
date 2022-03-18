@@ -7,7 +7,7 @@
  * 612852475143
  * Return: Always 0
  */
-int main(viod)
+int main(void)
 {
 	long c;
 	long j;
