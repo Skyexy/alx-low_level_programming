@@ -18,7 +18,7 @@ int main(void)
 		if (num % c == 0)
 		{
 			j = c;
-			num = num / c
+			num = num / c;
 		}
 	}
 	printf("%ld\n", j);
