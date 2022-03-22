@@ -8,18 +8,19 @@
  * @n: int type variable
  */
 
-void print_array(int *a, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; i < n; i++)
+	i = 0;
+	while (src[i] != '\0')
 	{
-		printf("%d", *(a + i));
-		
-		if (i != n - 1)
-		{
-			printf(", ");
-		}
+		i++;
 	}
-	printf("\n");
+	for (j = 0; j <= i; j++)
+	{
+		*(dest + j) = *(src + j);
+	}
+
+	return (dest);
 }
