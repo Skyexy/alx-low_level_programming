@@ -2,18 +2,11 @@
 #include <stdio.h>
 
 /**
- *
- *  * print_array - function that prints n elements of an array
- *
- *   * of integers, followed by a new line.
- *
- *    *
- *
- *     * @a: int pointer variable
- *
- *      * @n: int type variable
- *
- *       */
+ * print_array - function that prints n elements of an array
+ * of integers, followed by a new line.
+ * @a: int pointer variable
+ * @n: int type variable
+ */
 
 void print_array(int *a, int n)
 {
