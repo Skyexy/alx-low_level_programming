@@ -1,38 +1,27 @@
 #include "main.h"
 
 /**
- * _strcat - concentrates two srings 
+ * _strcat - concentrates two srings
  *
- * return: the string to be concentrated
+ * Return: dest
+ *
+ * @dest: the lead string
+ * @src: this is the baby string
  */
 char *_strcat(char *dest, char *src)
 {
 	int i;
-	int v;
 	int j;
-	char c;
 
-	v = 0;
-	while(dest[v] != '\0')
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		v++;
 	}
-	for (i = 0; i < v; i++)
 
-	i++;
-	dest[i] = 32;
-	v = 0;
-	i++;
 
-	while(src[v] != '\0')
+	for (j = 0; src[j] != '\0'; i++, j++)
 	{
-		v++;
+		dest[i] = src[j];
 	}
-	for (j = 0; j <= v; j++)
-	{
-		c = src[j];
-		dest[i] = c;
-		i++;
-	}
-	return(dest);
+	dest[i] = '\0';
+	return (dest);
 }
