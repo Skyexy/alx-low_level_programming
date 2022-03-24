@@ -12,11 +12,12 @@ char *string_toupper(char *sy)
 	int k = 0;
 	int y;
 	int z = 0;
+
 	for (i = 0; sy[i] != '\0'; i++)
 	{
 		if (sy[i] >= 97 && sy[i] <= 122)
 		{
-			while (j != sy[i] )
+			while (j != sy[i])
 			{
 				k++;
 				j++;
@@ -31,5 +32,5 @@ char *string_toupper(char *sy)
 			sy[i] = y;
 		}
 	}
-	return(sy);
+	return (sy);
 }
