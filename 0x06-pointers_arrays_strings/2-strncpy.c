@@ -1,24 +1,22 @@
 #include "main.h"
 
 /**
- * _strncpy - copys two ctring to onr with respect to num
- *
+ * _strncpy - a function that copies the n nunber of string to dest
  * Return: dest
- * @char: parent char
- * @scr: baby char
- * @n: int 
+ * @dest: where src is to be copied to
+ * @n: number of strings in src to be copied
+ * @src: string to be copied
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int l = 0;
 	int k;
-	int y = 0;
 
-	for (k = 0; k < 98 - 1; k++, l++, y++)
+	for (k = 0; src[k] != '\0' && k < n; k++)
 	{
-		if (y < n)
-		{
-			dest[l] = src[k];
-		}
+		dest[k] = src[k];
 	}
-	return(dest);
+
+	for (; k < n; k++)
+		dest[k] = '\0';
+	return (dest);
 }
