@@ -9,29 +9,19 @@
 char *leet(char *sy)
 {
 	int i;
-	int p;
+	int r[5] = {97,101,111,116,108};
+	int l[5] = {65,69,79,84,76};
+	int s[5] ={52,51,48,55,49};
+	int y;
+
 	for (i = 0; sy[i] != '\0'; i++)
 	{
-		p = sy[i];
-		if (p == 97 || p == 65)
+		for (y = 0; y < 5; y++)
 		{
-			sy[i] = 52;
-		}
-		else if (p == 101 || p == 69)
-		{
-			sy[i] = 51;
-		}
-		else if (p == 111 || p == 79)
-		{
-			sy[i] = 48;
-		}
-		else if (p == 116 || p == 84)
-		{
-			sy[i] = 55;
-		}
-		else if (p == 108 || p == 76)
-		{
-			sy[i] = 49;
+			if (sy[i] == r[y] || sy[i] == l[y])
+			{
+				sy[i] = s[y];
+			}
 		}
 	}
 	return (sy);
