@@ -26,7 +26,9 @@ void print_number(int n)
 			adjustor = adjustor / 10;
 		}
 		if (sign == 1)
+		{
 			_putchar('-');
+		}
 		while (adjustor >= 1)
 		{
 			_putchar(-(n / adjustor) + '0');
@@ -35,5 +37,7 @@ void print_number(int n)
 		}
 	}
 	else
+	{
 		_putchar('0');
+	}
 }
