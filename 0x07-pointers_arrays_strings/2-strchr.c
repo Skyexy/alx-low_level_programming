@@ -10,16 +10,18 @@ char *_strchr(char *s, char c)
 {
 	int y;
 	int h;
+	char *p = NULL;
 
 	for (y = 0; s[y] != c; y++)
 	{
 	}
 	for (h = y; s[h] != '\0'; h++)
 	{
+		printf("%c", s[h]);
 	}
 	if (s[y] == '\0')
 	{
-		return (0);
+		printf("%s", p);
 	}
 	return (0);
 }
