@@ -21,7 +21,7 @@ char *_strchr(char *s, char c)
 	}
 	if (s[y] == '\0')
 	{
-		_putchar( p);
+		_putchar(p);
 	}
 	return (0);
 }
