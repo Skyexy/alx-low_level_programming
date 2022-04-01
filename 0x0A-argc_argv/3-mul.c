@@ -9,19 +9,14 @@
  */
 int main(int argc, char *argv[])
 {
-	int c = 1;
-	int y = 1;
+	unsigned int c = 1;
 
 	if (argc <= 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	while (c < argc)
-	{
-		y *= atoi(argv[c]);
-		c++;
-	}
+	c = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", y);
 	return (0);
 }
