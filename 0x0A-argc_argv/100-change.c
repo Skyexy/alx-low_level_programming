@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int num = 0;
 	int f = 0;
 	int n = atoi(argv[1]);
-	ing g;
+	int g;
 
 	if (argc != 2)
 	{
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		g = s[f];
 		if ((n - g) >= 0)
 		{
-			n -= s[f];
+			n -= g;
 			num += 1;
 			continue;
 		}
