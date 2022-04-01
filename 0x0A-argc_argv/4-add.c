@@ -11,20 +11,20 @@ int main(int argc, char *argv[])
 {
 	int n = 0;
 	int o = 1;
+	int u;
 
 	if (argc > 1)
 	{
 		while (o < argc)
 		{
-			if (*argv[o] - '0' >= 1 && *argv[o] - '0' <= 9)
+			u = atoi(argv[o]);
+			if (isdigit(u))
 			{
 				n += atoi(argv[o]);
+				o++;
 			}
-			else
-			{
-				printf("Error");
-				return (1);
-			}
+			printf("Error");
+			return (1);
 		}
 	}
 	printf("%d\n", n);
