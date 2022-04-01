@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - this print prints the name of a program
@@ -6,11 +7,14 @@
  * @argv: array of arguments passed
  * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	if (argc >= 1)
+	char *t = argv[0];
+
+	while (*t != '\0')
 	{
-		_putchar(*(argv[0]));
+		_putchar(*t);
+		t++;
 	}
 	return (0);
 }
