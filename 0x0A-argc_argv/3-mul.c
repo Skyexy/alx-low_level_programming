@@ -9,7 +9,7 @@ int _atoi(char *s)
 {
 	int n = 0;
 	unsigned int total = 0;
-	identify = 0;
+	int identify = 0;
 	
 	while(*s)
 	{
@@ -21,7 +21,7 @@ int _atoi(char *s)
 		if (*s >= 1 && *s <= 9)
 		{
 			identify = 1;
-			toatal = (total * 10) + (*s - '0');
+			total = (total * 10) + (*s - '0');
 			s++;
 		}
 		else if (identify == 0)
