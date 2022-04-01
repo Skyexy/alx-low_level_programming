@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	int n = 0;
 	int o = 1;
+
 	if (argc <= 1)
 	{
 		printf("Error\n");
@@ -18,14 +19,14 @@ int main(int argc, char *argv[])
 	}
 	if (argc > 1)
 	{
-		if (argv[o] >= '1' || <= '9')
+		if (*(argv[o]) >= '1' && *(argv[o]) <= '9')
 		{
 			while (o < argc)
 			{
-				n += atoi(argv[0]);
+				n += atoi(argv[o]);
 			}
 		}
-		else 
+		else
 		{
 			printf("Error");
 			return (1);
