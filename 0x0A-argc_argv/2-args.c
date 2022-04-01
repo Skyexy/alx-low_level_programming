@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - this print prints the name of a program
  * @argc: number of arguments
@@ -8,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 0;
-	
+
 	while (i < argc)
 	{
 		printf("%s\n", argv[i]);
