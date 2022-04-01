@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	}
 	while (n > 0)
 	{
-		if (n - s[f])
+		if ((n - s[f]) >= 0)
 		{
 			n -= s[f];
 			num += 1;
