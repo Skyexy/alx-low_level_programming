@@ -15,22 +15,22 @@ int main(int argc, char *argv[])
 	int n = atoi(argv[1]);
 	int g;
 
-	if (argc != 2)
+	if (argc == 2)
 	{
-		printf("Error\n");
-		return (1);
-	}
-	while (n > 0)
-	{
-		g = s[f];
-		if ((n - g) >= 0)
+		while (n > 0)
 		{
-			n -= g;
-			num += 1;
-			continue;
+			g = s[f];
+			if ((n - g) >= 0)
+			{
+				n -= g;
+				num += 1;
+				continue;
+			}
+			f += 1;
 		}
-		f += 1;
+		printf("%d\n", num);
+		return (0);	
 	}
-	printf("%d\n", num);
-	return (0);
+	printf("Error\n");
+	return (1);
 }
