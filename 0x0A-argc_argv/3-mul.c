@@ -5,7 +5,7 @@
  * @s: A string input
  * Return: integer from conversion
  */
-int _atoi(*s)
+int _atoi(char *s)
 {
 	int n = 0;
 	unsigned int total = 0;
