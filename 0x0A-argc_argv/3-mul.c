@@ -18,7 +18,7 @@ int _atoi(char *s)
 			n = 1;
 			s++;
 		}
-		if (*s >= 1 && *s <= 9)
+		if (*s >= '1' && *s <= '9')
 		{
 			identify = 1;
 			total = total * 10 + *s - '0';
