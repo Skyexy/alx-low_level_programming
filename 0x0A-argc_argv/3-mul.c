@@ -10,8 +10,7 @@ int _atoi(char *s)
 	int n = 0;
 	unsigned int total = 0;
 	int identify = 0;
-	
-	while(*s)
+	while (*s)
 	{
 		if (*s == '-')
 		{
@@ -48,7 +47,6 @@ int main(int argc, char *argv[])
 	int m;
 	int s;
 	int f;
-	
 	if (argc < 2)
 	{
 		printf("Error\n");
