@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - this print prints the name of a program
@@ -9,11 +8,13 @@
  */
 int main(int argc, char *argv[])
 {
+	int m;
 	if (argc <= 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	printf("%d\n", (atoi(argv[1]) * atoi(argv[2])));
+	m = ((*argv[1] - '0') * (*argv[2] - '0'));
+	printf("%d\n", m);
 	return (0);
 }
