@@ -21,20 +21,13 @@ int main(int argc, char *argv[])
 	}
 	while (n > 0)
 	{
-		if (n > 0)
+		if (n - s[f])
 		{
-			if (n - s[f])
-			{
-				n -= s[f];
-				num++;
-				continue;
-			}
-			f++;
+			n -= s[f];
+			num += 1;
+			continue;
 		}
-		else
-		{
-			break;
-		}
+		f += 1;
 	}
 	printf("%d\n", n);
 	return (0);
