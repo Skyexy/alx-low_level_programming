@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 			printf("Error");
 			return (1);
 		}
+		o++;
 	}
 	printf("%d", n);
 	return (0);
