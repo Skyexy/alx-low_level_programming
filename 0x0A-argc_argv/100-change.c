@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int num = 0;
 	int f = 0;
 	int n = atoi(argv[1]);
+	ing g;
 
 	if (argc != 2)
 	{
@@ -21,7 +22,8 @@ int main(int argc, char *argv[])
 	}
 	while (n > 0)
 	{
-		if ((n - s[f]) >= 0)
+		g = s[f];
+		if ((n - g) >= 0)
 		{
 			n -= s[f];
 			num += 1;
@@ -29,6 +31,6 @@ int main(int argc, char *argv[])
 		}
 		f += 1;
 	}
-	printf("%d\n", n);
+	printf("%d\n", num);
 	return (0);
 }
