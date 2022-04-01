@@ -24,8 +24,11 @@ int main(int argc, char *argv[])
 				n += u;
 				o++;
 			}
-			printf("Error");
-			return (1);
+			else
+			{
+				printf("Error");
+				return (1);
+			}
 		}
 	}
 	printf("%d\n", n);
