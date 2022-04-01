@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
 	{
 		while (o < argc)
 		{
-			u = atoi(argv[o]);
-			if (isdigit(u))
+			if (isdigit(argv[o]))
 			{
-				n += atoi(argv[o]);
+				u = atoi(argv[o]);
+				n += u;
 				o++;
 			}
 			printf("Error");
