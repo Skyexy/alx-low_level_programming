@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
 {
 	int n = atoi(argv[1]);
 	int s[5] = {25, 10, 5, 2, 1};
-	num = 0;
-	f = 0;
-	
+	int num = 0;
+	int f = 0;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
