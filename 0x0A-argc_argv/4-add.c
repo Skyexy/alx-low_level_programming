@@ -12,27 +12,21 @@ int main(int argc, char *argv[])
 	int n = 0;
 	int o = 1;
 
-	if (argc <= 1)
-	{
-		printf("Error\n");
-		return (1);
-	}
 	if (argc > 1)
 	{
-		if (*(argv[o]) >= '1' && *(argv[o]) <= '9')
+		while (o < argc)
 		{
-			while (o < argc)
+			if (*argv[o] - '0' >= 1 && *argv[o] - '0' <= 9)
 			{
 				n += atoi(argv[o]);
 			}
+			else
+			{
+				printf("Error");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error");
-			return (1);
-		}
-		o++;
 	}
-	printf("%d", n);
+	printf("%d\n", n);
 	return (0);
 }
