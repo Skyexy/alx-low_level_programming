@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<stdbool.h>
+#include <ctype.h>
 
 /**
  * main - this print prints the name of a program
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	{
 		while (o < argc)
 		{
-			if (isdigit(argv[o]))
+			if (isdigit(*argv[o]))
 			{
 				u = atoi(argv[o]);
 				n += u;
