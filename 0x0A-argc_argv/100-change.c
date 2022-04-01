@@ -10,50 +10,25 @@
 int main(int argc, char *argv[])
 {
 	int n = atoi(argv[1]);
+	int s[5] = {25, 10, 5, 2, 1}
 	num = 0;
+	f = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	while ( n != 0)
+	while (n != 0)
 	{
 		if (n > 0)
 		{
-			if (n - 25)
+			if (n - s[f])
 			{
-				n -= 25;
+				n -= s[f];
 				num++;
 				continue;
 			}
-			else if (n - 10)
-			{
-				n -= 10;
-				num++;
-				continue;
-			}
-			else if (n - 5 == 0)
-			{
-				n -= 5;
-				num++;
-				continue;
-			}
-			else if (n - 2 == 0)
-			{
-				n -= 2;
-				num++;
-				continue;
-			}
-			else if (n - 1 == 0)
-			{
-				n -= 1;
-				num++;
-				continue;
-			}
-			else{
-				printf("%d", num);
-				break;
-			}
+			f++;
 		}
 	}
 	printf("%d\n", n);
