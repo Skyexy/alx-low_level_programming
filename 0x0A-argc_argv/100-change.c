@@ -19,14 +19,15 @@ int main(int argc, char *argv[])
 	{
 		while (n > 0)
 		{
-			g = s[f];
-			if ((n - g) >= 0)
+			for (g = 0; g < 4; g++,f++)
 			{
-				n -= g;
-				num += 1;
-				continue;
+				if ((n - s[f]) > 0)
+				{
+					n -= s[f];
+					num += 1;
+					continue;
+				}
 			}
-			f += 1;
 		}
 		printf("%d\n", num);
 		return (0);	
