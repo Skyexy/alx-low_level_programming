@@ -1,62 +1,25 @@
+#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * _atoi - a function that converts string to integer
- * @s: A string input
- * Return: integer from conversion
+ * main - multiply 2 numbers passed to main, or Error
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 1 if error, 0 if function runs correctly
  */
-int _atoi(char *s)
-{
-	int n = 0;
-	unsigned int total = 0;
-	int identify = 0;
 
-	while (*s)
-	{
-		if (*s == '-')
-		{
-			n = 1;
-			s++;
-		}
-		if (*s >= '1' && *s <= '9')
-		{
-			identify = 1;
-			total = total * 10 + *s - '0';
-			s++;
-		}
-		else if (identify == 0)
-		{
-			break;
-		}
-		identify = 0;
-	}
-	if (n == 1)
-	{
-		total = total * -1;
-	}
-	return (total);
-}
-
-/**
- * main - this print prints the name of a program
- * @argc: number of arguments
- * @argv: array of arguments passed
- * Return: 0
- */
 int main(int argc, char *argv[])
 {
-	int m;
-	int s;
-	int f;
+	(void) argc;
 
-	if (argc < 2)
+	if (argv[1] && argv[2])
 	{
-		printf("Error\n");
-		return (1);
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+		return (0);
 	}
-	m = _atoi(argv[1]);
-	s = _atoi(argv[2]);
-	f = m * s;
-	printf("%d\n", f);
-	return (0);
+	else
+		printf("Error\n");
+
+	return (1);
 }
