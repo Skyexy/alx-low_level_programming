@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -18,9 +19,9 @@ int main(int argc, char *argv[])
 	{
 		while (o < argc)
 		{
-			if (isdigit(*argv[o]))
+			u = strtol(argv[o]);
+			if (u)
 			{
-				u = atoi(argv[o]);
 				n += u;
 				o++;
 			}
