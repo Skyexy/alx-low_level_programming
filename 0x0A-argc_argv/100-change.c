@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	{
 		while (n > 0)
 		{
-			for (g = 0; g < 4; g++,f++)
+			for (g = 0; g < 4; g++, f++)
 			{
 				if ((n - s[f]) > 0)
 				{
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 			}
 		}
 		printf("%d\n", num);
-		return (0);	
+		return (0);
 	}
 	printf("Error\n");
 	return (1);
