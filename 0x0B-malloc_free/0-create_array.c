@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /*
-* create_array - this creates an array of charc, with memory of size
+* *create_array - this creates an array of charc, with memory of size
 * @size: size of array
 * @c: the char to be put in array
 * Return: m and NULL if size is 0 or prog fails
