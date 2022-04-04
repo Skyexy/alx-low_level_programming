@@ -5,7 +5,7 @@ char *_strdup(char *str)
 {
 	char *t;
 	int y = 0;
-	int p;
+	int p = 0;
 	
 	while (str[y] != '\0')
 	{
