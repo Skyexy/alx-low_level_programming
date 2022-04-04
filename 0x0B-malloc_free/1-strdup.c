@@ -22,5 +22,5 @@ char *_strdup(char *str)
 		p++;
 	}
 	t[p] = '\0';
-	return (0);
+	return (t);
 }
