@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
-_strdup - returns a pointer to the newly allocated space
-@str: pointer to be copied
-Return: t and NULL is t = NULL
-
+ * _strdup - returns a pointer to the newly allocated space
+ * @str: pointer to be copied
+ * Return: t and NULL is t = NULL
+ */
 char *_strdup(char *str)
 {
 	char *t;
