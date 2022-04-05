@@ -13,6 +13,8 @@ int **alloc_grid(int width, int height)
 	int **array;
 	unsigned int i = 0;
 	unsigned int j = 0;
+	unsigned int k = width;
+	unsigned int p = height;
 
 	if (width <= 0 || height <= 0)
 	{
@@ -23,10 +25,10 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	while (i < height)
+	while (i < p)
 	{
 		array[i] = malloc(sizeof(int) * width);
-		while (j < width)
+		while (j < k)
 		{
 			array[i][j] = 0;
 			j++;
