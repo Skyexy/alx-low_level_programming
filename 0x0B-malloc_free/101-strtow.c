@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
-strtow - splits a string into words.
-@str: this is the string to be split
-Return: t if susscesfull;
+ * strtow - splits a string into words.
+ * @str: this is the string to be split
+ * Return: t if susscesfull;
+ */
 char **strtow(char *str)
 {
 	int p = 0;
