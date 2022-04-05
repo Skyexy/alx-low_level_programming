@@ -17,8 +17,8 @@ int y(char* s1, char* s2)
 			p++;
 		}
 	}
-	return(y, p, l);
 	l = (y + p);
+	return(ypl);
 }
 /**
  * str_concat - a function that concatenates two strings
@@ -33,11 +33,11 @@ char *str_concat(char *s1, char *s2)
 	int m = 0;
 	if (!s1)
 	{
-		s1 = malloc(sizeof(char))
+		s1 = malloc(sizeof(char));
 	}
 	if (!s2)
 	{
-		s2 = malloc(sizeof(char))
+		s2 = malloc(sizeof(char));
 	}
 	y(s1, s2);
 	t = malloc((sizeof(char) * l) + 1);
