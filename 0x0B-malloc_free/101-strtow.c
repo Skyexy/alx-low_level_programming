@@ -7,24 +7,20 @@ strtow - splits a string into words.
 Return: t if susscesfull;
 char **strtow(char *str)
 {
-	int p = 0;
-	int g = 0;
-	int u = 0;
-	int z = 0;
-	int y = 0;
+	int p = 0, g = 0, u = 0, z = 0, y = 0;
 	char **t;
 	
 	if (str == NULL || str == "")
-		return (null);
+		return (NULL);
 	while(str[p] != '\0')
 	{
 		if (str[p] != ' ')
 			g++;
 		p++;
 	}
-	t = malloc(sizeof(char*) * g);
+	t = malloc(sizeof(char *) * g);
 	p = 0;
-	if (t == null)
+	if (t == NULL)
 		return (NULL);
 	while(str[p] != '\0')
 	{
@@ -48,10 +44,7 @@ char **strtow(char *str)
 			u++;
 			y++;
 		}
-		t[z][y] = '\0';
 		z++;
 	}
-	z++;
-	t[z] = NULL;
 	return(t);
 }
