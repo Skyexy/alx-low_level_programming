@@ -9,10 +9,13 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int y = 0; int p = 0; int l; char *t;
-	int k = 0;
-	int m = 0;
-
+	int y, p, l, k, m;
+	char *t;
+	
+	y = 0;
+	p = 0;
+	k = 0;
+	m = 0;
 	if (!s1)
 		s1 = malloc(sizeof(char));
 	if (!s2)
@@ -20,13 +23,9 @@ char *str_concat(char *s1, char *s2)
 	while (s1[y] || s2[p] != '\0')
 	{
 		if (s1[y] != '\0')
-		{
 			y++;
-		}
 		if (s2[p] != '\0')
-		{
 			p++;
-		}
 	}
 	l = (y + p);
 	t = malloc((sizeof(char) * l) + 1);
