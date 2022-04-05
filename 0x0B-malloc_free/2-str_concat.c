@@ -11,7 +11,7 @@ char *str_concat(char *s1, char *s2)
 {
 	int y, p, l, k, m;
 	char *t;
-	
+
 	y = 0;
 	p = 0;
 	k = 0;
@@ -43,5 +43,5 @@ char *str_concat(char *s1, char *s2)
 		k++;
 	}
 	t[k] = '\0';
-	return(t);
+	return (t);
 }
