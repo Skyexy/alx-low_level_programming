@@ -4,6 +4,7 @@
 char *argstostr(int ac, char **av)
 {
     int p = 0;
+    int o = 0;
     char *g;
     int z = 0;
     while (p < ac)
@@ -13,10 +14,10 @@ char *argstostr(int ac, char **av)
         while (r[y] != '\0')
         {
             y++;
+            o++;
         }
         p++;
     }
-    c[o] = '\0';
     g = malloc((sizeof(char) * o) + (ac + 1));
     p = 0;
     while (p < ac)
@@ -31,6 +32,7 @@ char *argstostr(int ac, char **av)
         }
         g[z] = '\n';
         z++;
+        p++;
     }
     g[z] = '\0';
     return (g);
