@@ -4,26 +4,21 @@
 char *argstostr(int ac, char **av)
 {
     int p = 0;
-    int o = 0;
     char *g;
-    char *c;
+    int z = 0;
     while (p < ac)
     {
         int y = 0;
         char *r = av[p];
         while (r[y] != '\0')
         {
-            c[o] = r[y];
             y++;
-            o++;
         }
         p++;
     }
     c[o] = '\0';
     g = malloc((sizeof(char) * o) + (ac + 1));
     p = 0;
-    int z = 0;
-    int s = 0;
     while (p < ac)
     {
         int y = 0;
