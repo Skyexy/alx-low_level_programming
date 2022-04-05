@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+strtow - splits a string into words.
+@str: this is the string to be split
+Return: t if susscesfull;
 char **strtow(char *str)
 {
 	int p = 0;
@@ -9,6 +13,9 @@ char **strtow(char *str)
 	int z = 0;
 	int y = 0;
 	char **t;
+	
+	if (str == NULL || str == "")
+		return (null);
 	while(str[p] != '\0')
 	{
 		if (str[p] != ' ')
@@ -17,6 +24,8 @@ char **strtow(char *str)
 	}
 	t = malloc(sizeof(char*) * g);
 	p = 0;
+	if (t == null)
+		return (NULL);
 	while(str[p] != '\0')
 	{
 		g = 0;
