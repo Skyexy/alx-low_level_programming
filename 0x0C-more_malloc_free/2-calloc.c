@@ -8,7 +8,7 @@
  * @i: this is an integer
  * Return: s
  */
-char sup(char *s, char b, unsigned int i)
+char *sup(char *s, char b, unsigned int i)
 {
 	unsigned int p = 0;
 	
@@ -28,7 +28,6 @@ char sup(char *s, char b, unsigned int i)
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
-	unsigned int i = 0;
 
 	if (nmemb == 0 || size == 0)
 	{
