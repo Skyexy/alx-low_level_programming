@@ -2,6 +2,23 @@
 #include <stdlib.h>
 
 /**
+sup - this changes array
+@s: this is a pointer
+@b: this is a character
+@i: this is an integer
+Return: s
+char sup(char *s, char b, unsigned int i)
+{
+	unsigned int p = 0;
+	
+	while (p < i)
+	{
+		s[i] = b;
+		p++;
+	}
+	return (s);
+}
+/**
  * _calloc - allocates memory for an array, using malloc.
  * @nmemb: size of memry
  * @size: number of mem in byts
@@ -21,10 +38,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	while (i < (size * nmemb))
-	{
-		ptr[i] = 0;
-		i++;
-	}
+	sup(p, 0, size * nmemb)
 	return (ptr);
 }
