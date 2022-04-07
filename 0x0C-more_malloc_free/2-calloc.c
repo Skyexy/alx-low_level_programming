@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 /**
-sup - this changes array
-@s: this is a pointer
-@b: this is a character
-@i: this is an integer
-Return: s
+ * sup - this changes array
+ * @s: this is a pointer
+ * @b: this is a character
+ * @i: this is an integer
+ * Return: s
+ */
 char sup(char *s, char b, unsigned int i)
 {
 	unsigned int p = 0;
