@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+string_nconcat -  a function that concatenates two strings.
+@s1: first sring
+@s2: second sring
+@n: number of string
+Return: prt
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int p = 0;
@@ -17,6 +23,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > u)
 		n = u;
 	ptr = malloc(sizeof(char) * (p + n + 1))
+	if (!prt)
+	{
+		return (NULL);
+	}
 	while (f < (p + n))
 	{
 		if (f < p)
@@ -32,4 +42,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		f++;
 	}
 	ptr[f] = '\0';
+	return (prt);
 } 
