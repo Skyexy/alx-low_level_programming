@@ -1,42 +1,40 @@
 #include "main.h"
 
 /**
- * sup - this changes array
- * @s: this is a pointer
- * @b: this is a character
- * @i: this is an integer
- * Return: s
+ * _memset - copy char
+ * @s: string
+ * @b: input
+ * @n: bytes
+ * Return: string
  */
-char *sup(char *s, char b, unsigned int i)
+
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int p = 0;
-	
-	while (p < i)
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
 	{
 		s[i] = b;
-		p++;
 	}
 	return (s);
 }
+
 /**
- * _calloc - allocates memory for an array, using malloc.
- * @nmemb: size of memry
- * @size: number of mem in byts
- * Return: ptr
+ * _calloc - allocates memory for an array using malloc
+ * @nmemb: n elements
+ * @size: bytes
+ * Return: pointer
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr;
+	void *p;
 
 	if (nmemb == 0 || size == 0)
-	{
 		return (NULL);
-	}
-	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
-	{
+	p = malloc(nmemb * size);
+
+	if (p == NULL)
 		return (NULL);
-	}
-	sup(ptr, 0, nmemb * size);
-	return (ptr);
+	_memset(p, 0, (nmemb * size));
+	return (p);
 }
