@@ -7,7 +7,7 @@ sup - this changes array
 @b: this is a character
 @i: this is an integer
 Return: s
-char sup(char *s, char b, unsigned int i)
+char *sup(char *s, char b, unsigned int i)
 {
 	unsigned int p = 0;
 	
@@ -38,6 +38,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	sup(p, 0, size * nmemb)
+	sup(ptr, 0, size * nmemb);
 	return (ptr);
 }
