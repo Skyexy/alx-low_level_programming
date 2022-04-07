@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 /**
-string_nconcat -  a function that concatenates two strings.
-@s1: first sring
-@s2: second sring
-@n: number of string
-Return: prt
+ * string_nconcat -  a function that concatenates two strings.
+ * @s1: first sring
+ * @s2: second sring
+ * @n: number of string
+ * Return: prt
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int p = 0;
