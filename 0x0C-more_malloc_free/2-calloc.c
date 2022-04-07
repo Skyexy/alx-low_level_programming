@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+_calloc - allocates memory for an array, using malloc.
+@nmemb: size of memry
+@size: number of mem in byts
+Return: ptr
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
@@ -13,5 +18,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (!ptr)
 	{
 		return (NULL);
-	}	
+	}
+	return (ptr);
 }
