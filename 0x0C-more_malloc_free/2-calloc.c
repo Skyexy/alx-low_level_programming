@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
  * sup - this changes array
@@ -33,11 +32,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	ptr = malloc(size * nmemb);
-	if (!ptr)
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	sup(ptr, 0, size * nmemb);
+	sup(ptr, 0, nmemb * size);
 	return (ptr);
 }
