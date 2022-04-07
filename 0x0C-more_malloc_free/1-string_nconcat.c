@@ -10,11 +10,11 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int p = 0;
-	int s = 0;
-	int f = 0;
-	int j = 0;
-	int u = 0;
+	unsigned int p = 0;
+	unsigned int s = 0;
+	unsigned int f = 0;
+	unsigned int j = 0;
+	unsigned int u = 0;
 	char *ptr;
 
 	while (s1[p] != '\0')
