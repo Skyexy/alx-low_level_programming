@@ -1,5 +1,12 @@
 #include "dog.h"
 #include <stdlib.h>
+#Include <stdio.h>
+
+/**
+ * print_dog - Prints a struct dog.
+ * @d: The struct dog to be printed.
+ * Description: Write a function that prints a struct dog
+ */
 
 void print_dog(struct dog *d)
 {
@@ -30,4 +37,5 @@ void print_dog(struct dog *d)
 			prinf("Owner: %s\n", d->owner);
 		}
 	}
+	return;
 }
