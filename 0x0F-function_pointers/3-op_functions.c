@@ -51,7 +51,7 @@ int op_div(int a, int b)
  * @a: the name of waht shold be printed
  * @b: this is the funcliton
  */
-int op_mod(int a, int b);
+int op_mod(int a, int b)
 {
 	return (a % b);
 }
