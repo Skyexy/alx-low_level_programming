@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * main - this prints the name of a function
+ * @argc: the name of waht shold be printed
+ * @argv: this is the funcliton
+ * Return: 0
+ */
 int main(int argc, char *argv[])
 {
 	int num1 = atoi(argv[1]);
