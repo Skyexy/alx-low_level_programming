@@ -1,10 +1,11 @@
 #include "function_pointers.h"
 
 /**
- * array_iterator - this prints the name of a function
+ * int_index - this prints the name of a function
  * @array: the name of waht shold be printed
  * @size: this is the funcliton
  * @cmp: function to be passed
+ * Return: -1 and something else otherwise
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
