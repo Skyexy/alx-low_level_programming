@@ -3,33 +3,41 @@
 #include <stdio.h>
 
 /**
- * main - this prints the name of a function
- * @argc: the name of waht shold be printed
- * @argv: this is the funcliton
- * Return: 0
+ * main - Prints the result of simple operations.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: Always 0.
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
-	char *c = argv[2];
+	int num1, num2;
+	char *op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (get_op_func(c) == NULL || c[1] != '\0')
+
+	num1 = atoi(argv[1]);
+	op = argv[2];
+	num2 = atoi(argv[3]);
+
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*c == '/' && num2 == 0) ||
-	    (*c == '%' && num2 == 0))
+
+	if ((*op == '/' && num2 == 0) ||
+	    (*op == '%' && num2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n",  get_op_func(c)(num1, num2));
+
+	printf("%d\n", get_op_func(op)(num1, num2));
+
 	return (0);
 }
