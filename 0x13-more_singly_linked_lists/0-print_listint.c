@@ -4,6 +4,7 @@
  * @h: Pointer with the address of the head of the node
  * Return: the number of nodes.
  */
+
 size_t print_listint(const listint_t *h)
 {
 	size_t n;
