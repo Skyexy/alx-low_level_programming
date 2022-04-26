@@ -5,7 +5,7 @@
  * @index: the index of the node
  * Return: 1 0r -1
  */
-int delete_nodeint_at_index(listint_t **head, unsigned int index);
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *p, *temp;
 	unsigned int i;
