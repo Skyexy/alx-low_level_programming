@@ -27,7 +27,7 @@ unsigned int binary_to_uint(const char *b)
 			{
 				total += squ;
 			}
-			squ*=2;
+			squ *= 2;
 		}
 		else
 			return (0);
