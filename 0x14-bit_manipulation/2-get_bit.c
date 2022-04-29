@@ -2,9 +2,10 @@
 #include "main.h"
 
 /**
- *  returns the value of a bit at a given index
+ * get_bit - returns the value of a bit at a given index
  * @n: the number to be changed
  * @index: the nindex to change
+ * Return: o and -1is wrong
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
