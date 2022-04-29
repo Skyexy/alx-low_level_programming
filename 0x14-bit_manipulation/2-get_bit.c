@@ -8,8 +8,8 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int i;
-	int o;
+	unsigned int i;
+	unsigned int o = -1;
 
 	for (i = 0; i < index; i++)
 	{
