@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * create_file - a function that creates a file
+ * @filename: The file to be printed
+ * @text_content: text to be given in the file
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 int create_file(const char *filename, char *text_content)
 {
 	int openfile;
