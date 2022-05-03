@@ -16,14 +16,14 @@ int main(int ac, char **av)
                 dprintf(STDERR_FILENO, "Error: Can't read from file %s", av[1]);
                 exit (98);
         }
-        file_to = open(av[2], O_RDWR | O_CREAT | O_TRUNC | O_APPEND, S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
+        file_to = open(av[2], O_RDWR | O_CREAT | O_TRUNC | O_APPEND, 0664);
         if (file_to == -1)
         {
                 dprintf(STDERR_FILENO, "Error: Can't write to %s", av[2]);
                 exit (99);
         }
         lo = 1024;
-        while (lo = 1024)
+        while (lo == 1024)
         {
                 lo = read(file_from, string, 1024);
                 if (lo == -1)
