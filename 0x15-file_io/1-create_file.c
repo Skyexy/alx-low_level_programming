@@ -18,6 +18,11 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
+	if (*text_content == '\0')
+	{
+		close(openfile);
+		return (1);
+	}
 	for (lenght = 0; text_content[lenght] != '\0'; lenght++)
 	{
 	}
