@@ -6,14 +6,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
         char *buff;
         int o = 0;;
 
-        openfile = open(&filename, O_RDONLY);
+        openfile = open(filename, O_RDONLY);
         
         if (openfile == -1 || filename == NULL)
         {
                 return (0);
         }
         
-        read(filename, buff, letters);
+        read(openfile, buff, letters);
         close(openfile);
         
         o = write(STDOUT_FILENO, buff, letters);
