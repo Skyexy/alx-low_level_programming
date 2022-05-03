@@ -3,18 +3,17 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
         int openfile;
-        char buff[letters];
+        char *buff;
         int o = 0;;
 
-        openfile = open(filename, O_RDONLY);
+        openfile = open(&filename, O_RDONLY);
         
-        if (openfile == -1 | filename == NULL)
+        if (openfile == -1 || filename == NULL)
         {
                 return (0);
         }
         
         read(filename, buff, letters);
-        buff[letters] = '\0';
         close(openfile);
         
         o = write(STDOUT_FILENO, buff, letters);
