@@ -1,18 +1,6 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(STDOUT_FILENO, &c, 1));
-}
-
-/**
  * read_textfile - reads a text file and prints it
  * @filename: The file to be printed
  * @letters: the number of file name to be printed;
