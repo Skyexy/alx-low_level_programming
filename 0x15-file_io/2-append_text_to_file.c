@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * append_text_to_file - appends text at the end of a file
+ * @filename: The file to be printed
+ * @text_content: letters to be appended
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int openfile;
