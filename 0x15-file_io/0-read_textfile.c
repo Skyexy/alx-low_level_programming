@@ -13,8 +13,8 @@ int _putchar(char c)
 }
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output.
- * @filenae: The file to be printed
+ * read_textfile - reads a text file and prints it
+ * @filename: The file to be printed
  * @letters: the number of file name to be printed;
  * Return: On success o.
  * On error, -1 is returned, and errno is set appropriately.
@@ -22,7 +22,7 @@ int _putchar(char c)
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int openfile;
-	char *buf = malloc(sizeof(char)*letters);
+	char *buf = malloc(sizeof(char) * letters);
 	int o = 0;
 
 	openfile = open(filename, O_RDONLY);
