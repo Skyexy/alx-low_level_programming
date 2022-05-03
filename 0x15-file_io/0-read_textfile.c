@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -13,6 +12,13 @@ int _putchar(char c)
 	return (write(STDOUT_FILENO, &c, 1));
 }
 
+/**
+ * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * @filenae: The file to be printed
+ * @letters: the number of file name to be printed;
+ * Return: On success o.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
         int openfile;
