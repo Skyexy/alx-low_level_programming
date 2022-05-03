@@ -26,10 +26,7 @@ int create_file(const char *filename, char *text_content)
 	for (lenght = 0; text_content[lenght] != '\0'; lenght++)
 	{
 	}
-	if (text_content != NULL)
-	{
-		o = write(openfile, text_content, lenght);
-	}
+	o = write(openfile, text_content, lenght);
 	if (o == -1)
 	{
 		return (-1);
