@@ -31,6 +31,7 @@ int main(void)
     {
         wait(&y);
     }
+    ly_pid = fork();
     if (ly_pid == 0)
     {
         printf("Wait for me, wait for me\n");
@@ -39,6 +40,7 @@ int main(void)
     {
         wait(&y);
     }
+    ky_pid = fork();
     if (ky_pid == 0)
     {
         printf("Wait for me, wait for me\n");
@@ -47,6 +49,7 @@ int main(void)
     {
         wait(&y);
     }
+    xy_pid = fork();
     if (ny_pid == 0)
     {
         printf("Wait for me, wait for me\n");
@@ -55,6 +58,7 @@ int main(void)
     {
         wait(&y);
     }
+    xy_pid = fork();
     if (xy_pid == 0)
     {
         printf("Wait for me, wait for me\n");
