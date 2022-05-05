@@ -23,14 +23,45 @@ int main(void)
         perror("Error:");
     }
     my_pid = fork();
-    wait(&y);
-    ly_pid = fork();
-    wait(&y);
-    ky_pid = fork();
-    wait(&y);
-    ny_pid = fork();
-    wait(&y);
-    xy_pid = fork();
-    wait(&y);
+    if (my_pid == 0)
+    {
+        printf("Wait for me, wait for me\n");
+    }
+    else
+    {
+        wait(&y);
+    }
+    if (ly_pid == 0)
+    {
+        printf("Wait for me, wait for me\n");
+    }
+    else
+    {
+        wait(&y);
+    }
+    if (ky_pid == 0)
+    {
+        printf("Wait for me, wait for me\n");
+    }
+    else
+    {
+        wait(&y);
+    }
+    if (ny_pid == 0)
+    {
+        printf("Wait for me, wait for me\n");
+    }
+    else
+    {
+        wait(&y);
+    }
+    if (xy_pid == 0)
+    {
+        printf("Wait for me, wait for me\n");
+    }
+    else
+    {
+        wait(&y);
+    }
     return (0);
 }
