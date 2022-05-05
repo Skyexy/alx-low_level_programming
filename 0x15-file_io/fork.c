@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-    char *argv[] = {"ls -l", "/tmp", NULL};
+    char *argv[] = {"/bin/ls", "-l", "/tmp", NULL};
     pid_t my_pid;
     int y;
 
