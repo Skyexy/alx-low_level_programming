@@ -6,9 +6,7 @@ hash_table_t *hash_table_create(unsigned long int size __attribute__((unused)))
 {
 	hash_table_t *memory = malloc(sizeof(hash_table_t));
 	memory -> size = size;
-	malloc(sizeof(char*) * size);
 	hash_node_t **slow_memory = malloc(sizeof(char *));
-	memory -> array = slow_memory;
 	unsigned long int i = 0;
 	hash_node_t *new;
 
@@ -27,5 +25,6 @@ hash_table_t *hash_table_create(unsigned long int size __attribute__((unused)))
 	        i++;
 	}
 	new -> next = NULL;
+	memory -> array = slow_memory;
 	return (memory);
 }
