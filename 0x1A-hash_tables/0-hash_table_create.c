@@ -4,7 +4,7 @@
 
 hash_table_t *hash_table_create(unsigned long int size __attribute__((unused)))
 {
-	hash_table_t *memory = malloc(sizeof(char) * size);
+	hash_table_t *memory = malloc(sizeof(char *) * size);
 
 	if (memory == NULL)
 	{
