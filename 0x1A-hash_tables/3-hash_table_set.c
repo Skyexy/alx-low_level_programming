@@ -4,26 +4,38 @@
 #include <stdbool.h>
 #include "hash_tables.h"
 
+/**
+ * hash_table_set - adds an element to the hash table.
+ * @ht: hash table you want to add or update the key/value to
+ * @key: string used to generate hash value
+ * @value: is the value associated with the key
+ *
+ * Return: 1 or else 0
+ */
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-        unsigned long int l = key_index(key, 1024);
-        unsigned long int loop = 0;
-        hash_table_t *me = ht;
-        if (ht == NULL)
-        {
-                return (0);
-        }
-        else
-        {
-                while (loop++ <= l)
-                {
-                        me = me -> next;
-                }
-                if (key_index(me -> key, 1024) == l)
-                {
-                        
-                }
-                me -> key = key;
-                me -> value = value;
-        }
+	hash_node_t *item = malloc(sizeof(hash_node_t));
+	int size = ht ->size;
+	int hash = key_index(key, size);
+
+	item -> key = (char *)key;
+	item -> value = (char *)value;
+	item -> next = (ht -> array)[(hash + 1)];
+	if (item == NULL || ht == NULL || key == "")
+	{
+		return (0);
+	}
+	while((ht -> array)[hash] != NULL && (ht -> array)[hash]->key != "")
+	{
+		hash = 0;
+
+		if ((ht -> array)[hash + 1] != NULL && (ht -> array)[hash + 1]->key != "")
+		{
+			++hash;
+		}
+		hash %= size;
+	}
+	(ht -> array)[hash] = item;
+	return (1);
 }
