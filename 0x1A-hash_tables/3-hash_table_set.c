@@ -21,7 +21,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	item->key = (char *)key;
 	item->value = (char *)value;
-	item->next = (ht->array)[(hash + 1)];
 	if (item == NULL || ht == NULL || key == NULL)
 	{
 		return (0);
