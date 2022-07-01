@@ -22,11 +22,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	item->key = (char *)key;
 	item->value = (char *)value;
-	if (item == NULL || ht == NULL || key == NULL)
+	if (item == NULL || ht == NULL || *key == "")
 	{
 		return (0);
 	}
-	while(node != NULL && node->key != NULL)
+	while(node != NULL && *(node->key) != "")
 	{
 		item -> next = node;
 	}
