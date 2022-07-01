@@ -17,20 +17,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *item = malloc(sizeof(hash_node_t));
 	int size = ht ->size;
-	int hash = key_index(key, size);
+	int hash = key_index((char *)key, size);
 
 	item -> key = (char *)key;
 	item -> value = (char *)value;
 	item -> next = (ht -> array)[(hash + 1)];
-	if (item == NULL || ht == NULL || key == "")
+	if (item == NULL || ht == NULL || key == NULL)
 	{
 		return (0);
 	}
-	while((ht -> array)[hash] != NULL && (ht -> array)[hash]->key != "")
+	while((ht -> array)[hash] != NULL && (ht -> array)[hash]->key != NULL)
 	{
 		hash = 0;
 
-		if ((ht -> array)[hash + 1] != NULL && (ht -> array)[hash + 1]->key != "")
+		if ((ht -> array)[hash + 1] != NULL && (ht -> array)[hash + 1]->key != NULL)
 		{
 			++hash;
 		}
