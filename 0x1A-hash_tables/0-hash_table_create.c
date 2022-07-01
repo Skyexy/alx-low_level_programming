@@ -18,7 +18,7 @@ hash_table_t *hash_table_create(unsigned long int size __attribute__((unused)))
 	{
 		return (NULL);
 	}
-	memory -> size = size;
-	memory -> array = slow_memory;
+	memory->size = size;
+	memory->array = slow_memory;
 	return (memory);
 }
