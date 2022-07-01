@@ -30,10 +30,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		hash = 0;
 
-		if ((ht->array)[hash + 1] != NULL && (ht->array)[hash + 1]->key != NULL)
-		{
-			++hash;
-		}
 		hash %= size;
 	}
 	(ht->array)[hash] = item;
