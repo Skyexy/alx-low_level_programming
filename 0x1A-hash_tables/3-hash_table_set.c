@@ -19,14 +19,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int size = ht->size;
 	int hash = key_index((const unsigned char *)key, size);
 
-	item -> key = (char *)key;
-	item -> value = (char *)value;
-	item -> next = (ht->array)[(hash + 1)];
+	item->key = (char *)key;
+	item->value = (char *)value;
+	item->next = (ht->array)[(hash + 1)];
 	if (item == NULL || ht == NULL || key == NULL)
 	{
 		return (0);
 	}
-	while( (ht->array)[hash] != NULL && (ht->array)[hash]->key != NULL)
+	while ((ht->array)[hash] != NULL && (ht->array)[hash]->key != NULL)
 	{
 		hash = 0;
 
