@@ -23,7 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	item->key = (char *)key;
 	item->value = (char *)value;
-	if (item == NULL || ht == NULL || (char *)key[0] = "")
+	if (item == NULL || ht == NULL || key[0] == "")
 	{
 		return (0);
 	}
