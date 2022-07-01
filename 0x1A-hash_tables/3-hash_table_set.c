@@ -28,12 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	while ((ht->array)[hash] != NULL && (ht->array)[hash]->key != NULL)
 	{
-		hash = 0;
-
-		if ((ht -> array)[0] != NULL && (ht -> array)[0]->key != NULL)
-		{
-			item->next = (ht -> array)[0]
-		}
+		++hash;
 
 		hash %= size;
 	}
