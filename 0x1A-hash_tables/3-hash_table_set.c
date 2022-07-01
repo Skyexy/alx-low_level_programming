@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "hash_tables.h"
+#include <string.h>
 
 /**
  * hash_table_set - adds an element to the hash table.
@@ -22,11 +23,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	item->key = (char *)key;
 	item->value = (char *)value;
-	if (item == NULL || ht == NULL || *key == "")
+	if (item == NULL || ht == NULL || (char *)key[0] = "")
 	{
 		return (0);
 	}
-	while(node != NULL && *(node->key) != "")
+	while(node != NULL)
 	{
 		item -> next = node;
 	}
