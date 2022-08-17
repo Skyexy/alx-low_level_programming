@@ -1,3 +1,2 @@
-all: execute_school
-execute_school:
-	gcc *.c -o school
+all: main.c holberton.c
+	gcc main.c school.c -o school
