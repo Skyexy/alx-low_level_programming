@@ -4,10 +4,10 @@ OBJ = main.o school.o
 NAME = school
 
 all: ${OBJ}
-  gcc ${OBJ} -o ${NAME}
+  ${CC} ${OBJ} -o ${NAME}
   
 school.o: school.c
-  gcc -c school.c
+  ${CC} -c school.c
   
 main.o: main.c
-  gcc -c main.c
+  ${CC} -c main.c
