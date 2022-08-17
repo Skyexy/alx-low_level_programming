@@ -1,0 +1,3 @@
+all: execute_school
+execute_school:
+	gcc *.c -o school
