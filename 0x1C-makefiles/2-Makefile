@@ -4,7 +4,7 @@ OBJ = main.o school.o
 NAME = school
 
 all: ${OBJ}
-  gcc ${OBJ} -o NAME
+  gcc ${OBJ} -o ${NAME}
   
 school.o: school.c
   gcc -c school.c
