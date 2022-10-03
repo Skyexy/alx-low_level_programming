@@ -44,6 +44,6 @@ int binary_search(int *array, size_t size __attribute__((unused)), int value __a
 	if (array == NULL)
 		return (-1);
 	else
-		j = binary(array, value, 0, size);
+		j = binary(array, value, 0, size - 1);
 	return (j);
 }
