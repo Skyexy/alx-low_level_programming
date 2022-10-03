@@ -27,18 +27,18 @@ int binary(int *array, int value, int low, int high)
 		retun (-1);
 	if (array[mid] == value)
 		return (mid);
-	elif (array[mid] > value)
+	else if (array[mid] > value)
 		low = mid + 1;
 	else
 		high = mid - 1;
-	int j = int binary(array, value, low, high);
+	int j = binary(array, value, low, high);
 	return (j);
 }
-int binary_search(int *array, size_t size, int value)
+int binary_search(int *array, size_t size __attribute__((unused)), int value)
 {
 	if (array == NULL)
 		retun (-1);
 	else
-		int j = binary(array, value, 0, size);
-	return (j)
+		j = binary(array, value, 0, size);
+	return (j);
 }
