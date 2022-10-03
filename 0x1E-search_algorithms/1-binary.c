@@ -25,7 +25,8 @@ int binary(int *array, int value, int low, int high)
 			printf(", ");
 		}
 	}
-	if (high == low)
+	printf("\n");
+	if (high <= low)
 		return (-1);
 	if (array[mid] == value)
 		return (mid);
