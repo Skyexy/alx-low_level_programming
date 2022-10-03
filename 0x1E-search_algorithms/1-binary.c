@@ -3,12 +3,13 @@
 #include "search_algos.h"
 
 /**
- * linear_search - searches for a value in an array of integers
+ * binary - searches for a value in an array of integers
  * @array: a pointer to the first element of the array
- * @size: number of elements in array
+ * @low: low of elements in array
+ * @high: high of elements in array
  * @value: the value to search for
  *
- * Return: Always EXIT_SUCCESS
+ * Return: int
  */
 int binary(int *array, int value, int low, int high)
 {
@@ -37,6 +38,15 @@ int binary(int *array, int value, int low, int high)
 	j = binary(array, value, low, high);
 	return (j);
 }
+
+/**
+ * binary_search - searches for a value in an array of integers
+ * @array: a pointer to the first element of the array
+ * @size: low of elements in array
+ * @value: the value to search for
+ *
+ * Return: int
+ */
 int binary_search(int *array, size_t size __attribute__((unused)), int value __attribute__((unused)))
 {
 	int j;
