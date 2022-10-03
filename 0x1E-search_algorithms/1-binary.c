@@ -41,7 +41,7 @@ int binary_search(int *array, size_t size __attribute__((unused)), int value __a
 	int j;
 
 	if (array == NULL)
-		retun (-1);
+		return (-1);
 	else
 		j = binary(array, value, 0, size);
 	return (j);
