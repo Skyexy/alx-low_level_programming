@@ -26,14 +26,14 @@ int binary(int *array, int value, int low, int high)
 		}
 	}
 	printf("\n");
-	if (high < low)
+	if (high <= low)
 		return (-1);
 	if (array[mid] == value)
 		return (mid);
 	else if (array[mid] > value)
-		high = mid + 1;
+		high = mid - 1;
 	else
-		low = mid - 1;
+		low = mid + 1;
 	j = binary(array, value, low, high);
 	return (j);
 }
