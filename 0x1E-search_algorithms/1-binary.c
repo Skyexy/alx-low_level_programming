@@ -16,7 +16,7 @@ int binary(int *array, int value, int low, int high)
 	size_t mid = (low + high) / 2;
 	int loop;
 	int j;
-	
+
 	if (high < low)
 		return (-1);
 	if (array[mid] == value)
@@ -47,13 +47,12 @@ int binary(int *array, int value, int low, int high)
  *
  * Return: int
  */
-int binary_search(int *array, size_t size __attribute__((unused)), int value __attribute__((unused)))
+int binary_search(int *array, size_t size __attribute__((unused)), int value)
 {
 	int j;
 
 	if (array == NULL)
 		return (-1);
-	else
-		j = binary(array, value, 0, size - 1);
+	j = binary(array, value, 0, size - 1);
 	return (j);
 }
