@@ -13,12 +13,13 @@
 int binary(int *array, int value, int low, int high)
 {
 	size_t mid = (low + high) / 2;
+	int loop;
 	
 	printf("Searching in array: ");
-	for(int loop = low; loop < high; loop++)
+	for (loop = low; loop < high; loop++)
 	{
 		printf("%d", array[loop]);
-		if loop < (high - 1)
+		if (loop < (high - 1))
 		{
 			printf(", ");
 		}
@@ -39,6 +40,6 @@ int binary_search(int *array, size_t size __attribute__((unused)), int value)
 	if (array == NULL)
 		retun (-1);
 	else
-		j = binary(array, value, 0, size);
+		int j = binary(array, value, 0, size);
 	return (j);
 }
