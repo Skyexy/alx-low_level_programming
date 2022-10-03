@@ -17,7 +17,7 @@ int binary(int *array, int value, int low, int high)
 	int j;
 	
 	printf("Searching in array: ");
-	for (loop = low; loop < high; loop++)
+	for (loop = low; loop <= high; loop++)
 	{
 		printf("%d", array[loop]);
 		if (loop < (high - 1))
