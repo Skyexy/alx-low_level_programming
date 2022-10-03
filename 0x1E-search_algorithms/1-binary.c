@@ -16,20 +16,20 @@ int binary(int *array, int value, int low, int high)
 	int loop;
 	int j;
 	
+	if (high < low)
+		return (-1);
+	if (array[mid] == value)
+		return (mid);
 	printf("Searching in array: ");
 	for (loop = low; loop <= high; loop++)
 	{
 		printf("%d", array[loop]);
-		if (loop < (high - 1))
+		if (loop <= (high - 1))
 		{
 			printf(", ");
 		}
 	}
 	printf("\n");
-	if (high < low)
-		return (-1);
-	if (array[mid] == value)
-		return (mid);
 	else if (array[mid] > value)
 		high = mid - 1;
 	else
