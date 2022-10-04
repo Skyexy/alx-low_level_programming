@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "search_algos.h"
+#include<math.h>
+
+int min(int a, int b)
+{
+	if (b > a)
+	    return a;
+	else
+		return b;
+}
 
 /**
  * linear_search - searches for a value in an array of integers
@@ -10,7 +19,7 @@
  *
  * Return: Always EXIT_SUCCESS
  */
-int linear_search(int *array, size_t size, int value, size_t low)
+int linear_searc(int *array, size_t size, int value, size_t low)
 {
 	size_t j = low;
 
@@ -57,6 +66,6 @@ int jump_search(int *array, size_t size, int value)
 		j += sqrt(size);
 	}
 	printf("Value found between indexes[%ld] and [%ld]\n", j, low);
-	return linear_search(array, size, value, low);
+	return linear_searc(array, size, value, low);
 	
 }
