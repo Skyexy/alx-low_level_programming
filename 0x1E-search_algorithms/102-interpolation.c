@@ -15,10 +15,9 @@ int interpolation_searc(int *array, size_t size, int value, int high, int low)
 	size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
 	if (low <= high && array[low] <= value && high >= low && array[high] >= value)
 	{
-
+		printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
 		if (array[pos] == value)
 		{
-			printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
 			return (pos);
 		}
 		else if (array[pos] > value)
@@ -33,5 +32,5 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	if (array == NULL)
 		return (-1);
-	return interpolation_searc(array, size, value, size, 0);
+	return interpolation_searc(array, size, value, size - 1, 0);
 }
