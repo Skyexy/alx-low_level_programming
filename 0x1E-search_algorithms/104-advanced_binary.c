@@ -13,7 +13,7 @@
  */
 int binary(int *array, int value, int low, int high)
 {
-	size_t mid = (low + high) / 2;
+	size_t mid = low + (high - low + 1) / 2;
 	int loop;
 	int j;
 
@@ -30,7 +30,8 @@ int binary(int *array, int value, int low, int high)
 	}
 	printf("\n");
 	if (array[mid] == value)
-		return (mid);
+		j = mid
+		high = mid - 1;
 	if (array[mid] > value)
 		high = mid - 1;
 	else
