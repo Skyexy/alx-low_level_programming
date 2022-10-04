@@ -27,8 +27,6 @@ int binary(int *array, int value, int low, int high)
 
 	if (high < low)
 		return (-1);
-	if (array[mid] == value)
-		return (mid);
 	printf("Searching in array: ");
 	for (loop = low; loop <= high; loop++)
 	{
@@ -39,6 +37,8 @@ int binary(int *array, int value, int low, int high)
 		}
 	}
 	printf("\n");
+	if (array[mid] == value)
+		return (mid);
 	if (array[mid] > value)
 		high = mid - 1;
 	else
