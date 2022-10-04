@@ -39,7 +39,7 @@ int binary(int *array, int value, int low, int high)
 		high = mid - 1;
 	else
 		low = mid + 1;
-	binary(array, value, low, high);
+	ans = binary(array, value, low, high);
 	return (ans);
 }
 
