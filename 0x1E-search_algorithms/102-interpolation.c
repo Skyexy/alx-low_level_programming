@@ -18,9 +18,9 @@ int interpolation_searc(int *array, size_t size, int value, int high, int low)
 
 		if (array[pos] == value)
 			return (pos);
-		elif (array[pos] > value)
+		else if (array[pos] > value)
 			return interpolation_searc(array, size, value, pos -1 , low);
-		elif (array[pos] < value)
+		else if (array[pos] < value)
 			return interpolation_searc(array, size, value, high, pos + 1);
 	}
 	return (-1);
