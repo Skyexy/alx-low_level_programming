@@ -14,7 +14,8 @@
 int binary(int *array, int value, int low, int high)
 {
 	size_t mid = low + (high - low + 1) / 2;
-	size_t ans;
+	size_t ans = -1;
+	size_t j;
 	int loop;
 
 	if (high < low)
@@ -38,8 +39,10 @@ int binary(int *array, int value, int low, int high)
 		high = mid - 1;
 	else
 		low = mid + 1;
-	ans = binary(array, value, low, high);
-	return (ans);
+	j = binary(array, value, low, high);
+	if (ans != -1)
+		return (ans);
+	return j
 }
 
 /**
