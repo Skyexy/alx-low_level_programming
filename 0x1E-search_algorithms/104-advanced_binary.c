@@ -30,8 +30,10 @@ int binary(int *array, int value, int low, int high)
 	}
 	printf("\n");
 	if (array[mid] == value)
-		j = mid
+	{
+		j = mid;
 		high = mid - 1;
+	}
 	if (array[mid] > value)
 		high = mid - 1;
 	else
