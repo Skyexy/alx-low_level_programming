@@ -40,9 +40,9 @@ int binary(int *array, int value, int low, int high)
 	else
 		low = mid + 1;
 	j = binary(array, value, low, high);
-	if (ans != -1)
+	if (ans < 0)
 		return (ans);
-	return j
+	return j;
 }
 
 /**
