@@ -33,7 +33,6 @@ int binary(int *array, int value, int low, int high)
 	{
 		ans = mid;
 		high = mid - 1;
-		return (ans);
 	}
 	if (array[mid] > value)
 		high = mid - 1;
