@@ -12,7 +12,7 @@
  */
 int interpolation_searc(int *array, size_t size, int value, int high, int low)
 {
-	if (low <= high && array[low] <= x && high >= low && array[high] >= x)
+	if (low <= high && array[low] <= value && high >= low && array[high] >= value)
 	{
 		size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
 
