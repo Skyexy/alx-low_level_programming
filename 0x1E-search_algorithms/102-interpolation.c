@@ -19,9 +19,9 @@ int interpolation_searc(int *array, size_t size, int value, int high, int low)
 		if (array[pos] == value)
 			return (pos);
 		elif (array[pos] > value)
-			interpolation_searc(array, size, value, pos -1 , low);
+			return interpolation_searc(array, size, value, pos -1 , low);
 		elif (array[pos] < value)
-			interpolation_searc(array, size, value, high, pos + 1);
+			return interpolation_searc(array, size, value, high, pos + 1);
 	}
 	return (-1);
 }
@@ -29,6 +29,5 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	if (array == NULL)
 		return (-1);
-	return
-	
+	return interpolation_searc(array, size, value, size - 1, 0);
 }
