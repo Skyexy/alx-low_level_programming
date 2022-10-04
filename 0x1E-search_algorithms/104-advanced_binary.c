@@ -47,7 +47,7 @@ int binary(int *array, int value, int low, int high)
  *
  * Return: int
  */
-int advanced_binary(int *array, size_t size__attribute__((unused)), int value)
+int advanced_binary(int *array, size_t size __attribute__((unused)), int value)
 {
 	int j;
 
