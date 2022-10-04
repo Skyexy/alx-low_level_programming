@@ -16,7 +16,6 @@ int binary(int *array, int value, int low, int high)
 	size_t mid = low + (high - low + 1) / 2;
 	size_t ans = -1;
 	int loop;
-	int j;
 
 	if (high < low)
 		return (-1);
