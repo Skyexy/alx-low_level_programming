@@ -33,5 +33,5 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	if (array == NULL)
 		return (-1);
-	return interpolation_searc(array, size, value, size - 1, 0);
+	return interpolation_searc(array, size, value, size, 0);
 }
