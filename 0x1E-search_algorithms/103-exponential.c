@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include "search_algos.h"
 
+int min(int a, int b)
+{
+	if (b > a)
+	    return a;
+	else
+		return b;
+}
+
 /**
  * binary - searches for a value in an array of integers
  * @array: a pointer to the first element of the array
@@ -63,5 +71,5 @@ int exponential_search(int *array, size_t size, int value)
 			break;
 	}
 	printf("Value found between indexes[%ld] and [%ld]\n", j/2, j);
-	return (binary(array, value, j/2, j));
+	return (binary(array, value, j/2, min(j, size-1)));
 }
