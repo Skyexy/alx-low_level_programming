@@ -38,6 +38,7 @@ int binary(int *array, int value, int low, int high)
 	{
 		high = mid - 1;
 		printf("%d", mid);
+		mid = binary(array, value, low, high);
 		return (mid);
 	}
 	if (array[mid] > value)
