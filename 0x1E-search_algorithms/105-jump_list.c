@@ -90,7 +90,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		j = min(j, size- 1);
 		next = jump(now, j, low);
 		
-		if (j == size)
+		if (j == size - 1)
 			break;
 	}
 	printf("Value checked array[%lu] = [%d]\n", (next -> index), (next -> n));
