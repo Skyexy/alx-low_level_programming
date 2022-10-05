@@ -11,7 +11,7 @@
  *
  * Return: Always EXIT_SUCCESS
  */
-int linear_searc(listint_t *list, size_t size, int value, size_t low)
+listint_t *linear_searc(listint_t *list, size_t size, int value, size_t low)
 {
 	size_t ind = 1;
 	listint_t *array = list;
@@ -47,7 +47,7 @@ int linear_searc(listint_t *list, size_t size, int value, size_t low)
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t low = list;
+	listint_t low = list;
 	size_t j = sqrt(size);
 	
 	if (list == NULL)
