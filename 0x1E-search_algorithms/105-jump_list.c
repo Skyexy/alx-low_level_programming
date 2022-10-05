@@ -66,7 +66,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	size_t j = sqrt(size);
 	int low;
 	
-	next = jump(now, j, low);
+	next = jump(now, j, 0);
 	
 	if (list == NULL)
 		return (NULL);
@@ -79,9 +79,9 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	while ((next -> n) < value)
 	{
 		now = next;
-		next = jump(now, j, low);
 		low = j;
 		j += sqrt(size);
+		next = jump(now, j, low);
 		printf("Value checked array[%lu] = [%d]\n", (next -> index), (next -> n));
 		
 		if (j >= size || next == NULL)
