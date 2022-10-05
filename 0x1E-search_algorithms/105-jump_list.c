@@ -39,7 +39,7 @@ listint_t *linear_searc(listint_t *list, size_t size, int value, size_t low)
 	while (ind < size)
 	{
 		point = low + ind;
-		printf("Value checked array[%d] = [%d]\n", point->index, point->n);
+		printf("Value checked array[%lu] = [%d]\n", point->index, point->n);
 		if (point->n == value)
 		{
 			break;
@@ -70,14 +70,14 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	if (list == NULL)
 		return (NULL);
 
-	printf("Value checked array[%lu] = [%d]\n", (low -> index), (low -> n));
+	printf("Value checked array[%lu] = [%d]\n", (now -> index), (now -> n));
 	if ((list->n) == value)
 	{
 		return (list);
 	}
 	while ((now -> n) < value)
 	{
-		next = jump(listint_t now, j, low);
+		next = jump(now, j, low);
 		now = next;
 		low = j;
 		j += sqrt(size);
@@ -87,6 +87,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			break;
 	}
 	printf("Value found between indexes[%d] and [%ld]\n", low, j);
-	low = linear_searc(list, j, value, (low->index));
+	now = linear_searc(list, j, value, (low->index));
 	return low;
 }
