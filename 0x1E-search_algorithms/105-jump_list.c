@@ -19,7 +19,7 @@ listint_t *linear_searc(listint_t *list, size_t size, int value, size_t low)
 
 	if (array == NULL)
 	{
-		return (-1);
+		return (NULL);
 	}
 	while (ind < size)
 	{
@@ -31,8 +31,8 @@ listint_t *linear_searc(listint_t *list, size_t size, int value, size_t low)
 		}
 		ind++;
 	}
-	if (j == size)
-		return (-1);
+	if (ind == size)
+		return (NULL);
 	else
 		return point;
 }
@@ -48,11 +48,11 @@ listint_t *linear_searc(listint_t *list, size_t size, int value, size_t low)
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	listint_t low = list;
-	size_t j = sqrt(size);
+	int j = sqrt(size);
 	
 	if (list == NULL)
 	{
-		return (-1);
+		return (NULL);
 	}
 	printf("Value checked array[%d] = [%d]\n", low->index, low->n);
 	if (list->n == value)
