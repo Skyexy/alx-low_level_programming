@@ -13,9 +13,9 @@ int min(int a, int b)
 }
 
 
-listint_t *jump(listint_t *list, size_t high, size_t lowt)
+skiplist_t *jump(skiplist_t *list, size_t high, size_t lowt)
 {
-	listint_t *low = list;
+	skiplist_t *low = list;
 	size_t j = lowt;
 	
 	while (j < high)
@@ -36,10 +36,10 @@ listint_t *jump(listint_t *list, size_t high, size_t lowt)
  *
  * Return: Always EXIT_SUCCESS
  */
-listint_t *linear_searc(listint_t *list, listint_t *size, int value, listint_t *low)
+skiplist_t *linear_searc(skiplist_t *list, skiplist_t *size, int value, skiplist_t *low)
 {
-	listint_t *ind =  low;
-	listint_t *array = list;
+	skiplist_t *ind =  low;
+	skiplist_t *array = list;
 
 	if (array == NULL || ind == NULL)
 		return (NULL);
@@ -67,8 +67,8 @@ listint_t *linear_searc(listint_t *list, listint_t *size, int value, listint_t *
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-	listint_t *now = list;
-	listint_t *next = list -> express;
+	skiplist_t *now = list;
+	skiplist_t *next = list -> express;
 	
 	if (list == NULL)
 		return (NULL);
