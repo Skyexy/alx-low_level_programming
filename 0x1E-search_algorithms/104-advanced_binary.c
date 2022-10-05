@@ -2,6 +2,21 @@
 #include <stdlib.h>
 #include "search_algos.h"
 
+void print_array(int *array, int low, int high)
+{
+	int loop;
+
+	printf("Searching in array: ");
+	for (loop = low; loop <= high; loop++)
+	{
+		printf("%d", array[loop]);
+		if (loop <= (high - 1))
+		{
+			printf(", ");
+		}
+	}
+	printf("\n");
+}
 /**
  * binary - searches for a value in an array of integers
  * @array: a pointer to the first element of the array
@@ -16,20 +31,10 @@ int binary(int *array, int value, int low, int high)
 	int mid = low + (high - low + 1) / 2;
 	int ans = -1;
 	int j = -1;
-	int loop;
-
+	
+	print_array(array, low, high);
 	if (high < low)
 		return (-1);
-	printf("Searching in array: ");
-	for (loop = low; loop <= high; loop++)
-	{
-		printf("%d", array[loop]);
-		if (loop <= (high - 1))
-		{
-			printf(", ");
-		}
-	}
-	printf("\n");
 	if (array[mid] == value)
 	{
 		ans = mid;
