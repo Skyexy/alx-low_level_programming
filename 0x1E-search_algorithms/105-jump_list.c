@@ -3,14 +3,6 @@
 #include "search_algos.h"
 #include<math.h>
 
-int min(int a, int b)
-{
-	if (b > a)
-	    return a;
-	else
-		return b;
-}
-
 /**
  * linear_search - searches for a value in an array of integers
  * @array: a pointer to the first element of the array
@@ -31,7 +23,7 @@ int linear_searc(listint_t *list, size_t size, int value, size_t low)
 	}
 	while (ind < size)
 	{
-		point = low + ind
+		point = low + ind;
 		printf("Value checked array[%d] = [%d]\n", point->index, point->n);
 		if (point->n == value)
 		{
@@ -42,7 +34,7 @@ int linear_searc(listint_t *list, size_t size, int value, size_t low)
 	if (j == size)
 		return (-1);
 	else
-		return (point);
+		return point;
 }
 
 /**
@@ -53,7 +45,7 @@ int linear_searc(listint_t *list, size_t size, int value, size_t low)
  *
  * Return: Always EXIT_SUCCESS
  */
-listint_t *jump_list(listint_t *list, size_t size, int value);
+listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	size_t low = list;
 	size_t j = sqrt(size);
