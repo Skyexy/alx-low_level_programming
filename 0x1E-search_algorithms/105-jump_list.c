@@ -81,7 +81,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	if (list == NULL)
 		return (NULL);
 
-	while ((now -> n) < value)
+	while ((next -> n) < value)
 	{
 		printf("Value checked array[%lu] = [%d]\n", (next -> index), (next -> n));
 		now = next;
