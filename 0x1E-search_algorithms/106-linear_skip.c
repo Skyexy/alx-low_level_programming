@@ -79,10 +79,11 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		now = next;
 		next = next -> express;
 		
-		if (next == NULL)
+		if (next -> next == NULL)
 			break;
 	}
-	printf("Value found between indexes[%d] and [%d]\n", now -> index,  min(next -> index, size- 1));
+	printf("Value checked array[%lu] = [%d]\n", (next -> index), (next -> n));
+	printf("Value found between indexes[%d] and [%d]\n", now -> index,  next -> next);
 	now = linear_searc(list, next, value, now);
 	return now;
 }
