@@ -64,14 +64,14 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	listint_t now = list;
 	listint_t next;
-	int j = sqrt(size);
+	size_t j = sqrt(size);
 	int low;
 	
 	if (list == NULL)
 	{
 		return (NULL);
 	}
-	printf("Value checked array[%d] = [%d]\n", low->index, low->n);
+	printf("Value checked array[%ld] = [%d]\n", low->index, low->n);
 	if (list->n == value)
 	{
 		return (list);
@@ -82,11 +82,12 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		now = next;
 		low = j;
 		j += sqrt(size);
-		printf("Value checked array[%d] = [%d]\n", now->index, now->n);
+		printf("Value checked array[%ld] = [%d]\n", now->index, now->n);
 		
-		if (j >= size || next == NULL)
+		if (j >= size || !next)
 			break;
 	}
-	printf("Value found between indexes[%d] and [%ld]\n", low, j);
-	return linear_searc(list, j, value, low->index);
+	printf("Value found between indexes[%d] and [%d]\n", low, j);
+	low = linear_searc(list, j, value, low->index);
+	return = low;
 }
