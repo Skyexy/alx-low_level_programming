@@ -28,7 +28,7 @@ listint_t *jump(listint_t *list, size_t high, size_t lowt)
  */
 listint_t *linear_searc(listint_t *list, listint_t *size, int value, listint_t *low)
 {
-	listint_t ind =  low;
+	listint_t *ind =  low;
 	listint_t *array = list;
 
 	if (array == NULL || ind == NULL)
