@@ -36,14 +36,14 @@ int binary(int *array, int value, int low, int high)
 		return (-1);
 	if (array[mid] == value)
 	{
-		j = mid;
 		high = mid - 1;
+		return mid
 	}
 	if (array[mid] > value)
 		high = mid - 1;
 	else
 		low = mid + 1;
-	binary(array, value, low, high);
+	j = binary(array, value, low, high);
 	return j;
 }
 
