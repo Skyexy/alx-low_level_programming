@@ -1,78 +1,45 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
-#include<math.h>
-
-int min(int a, int b)
-{
-	if (b > a)
-	    return a;
-	else
-		return b;
-}
 
 /**
- * linear_search - searches for a value in an array of integers
- * @array: a pointer to the first element of the array
- * @size: number of elements in array
- * @value: the value to search for
+ * jump_search - Search for the value in an array of integers
+ * @array: Pointer to the first element of the array to search
+ * @size: Number of elements in the array
+ * @value: Value to search for
  *
- * Return: Always EXIT_SUCCESS
- */
-int linear_searc(int *array, size_t size, int value, size_t low)
-{
-	size_t j = low;
-
-	if (array == NULL)
-	{
-		return (-1);
-	}
-	while (j < size)
-	{
-		printf("Value checked array[%ld] = [%d]\n", j, array[j]);
-		if (array[j] == value)
-		{
-			break;
-		}
-		j++;
-	}
-	if (j == size)
-		return (-1);
-	else
-		return (j);
-}
-
-/**
- * jump_searc - searches for a value in an array of integers
- * @array: a pointer to the first element of the array
- * @size: number of elements in array
- * @value: the value to search for
- *
- * Return: Always EXIT_SUCCESS
+ * Return: First index where value is located, or -1 if it's not there
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t low = 0;
-	size_t j = sqrt(size);
+	unsigned int i = 0;
+	unsigned int j = sqrt(size);
 
-	if (array == NULL)
-	{
+	if (!array)
 		return (-1);
-	}
-	printf("Value checked array[%ld] = [%d]\n", low, array[low]);
-	if (array[0] == value)
+
+	while (array[i] < value)
 	{
-		return (low);
-	}
-	while (array[min(j, size - 1)] < value)
-	{
-		printf("Value checked array[%ld] = [%d]\n", j, array[j]);
-		low = j;
-		j += sqrt(size);
-		if (j >= size)
+		printf("Value checked array[%d] = [%d]\n", i, array[i]);
+		i += j;
+		if (i >= size)
 			break;
 	}
-	printf("Value found between indexes[%ld] and [%ld]\n", low, j);
-	return linear_searc(array, size, value, low);
-	
+
+	printf("Value found between indexes [%d] and [%d]\n", i - j, i);
+	i -= j;
+
+	while (array[i] < value)
+	{
+		printf("Value checked array[%d] = [%d]\n", i, array[i]);
+		i++;
+		if (i == size)
+			return (-1);
+	}
+
+	if (array[i] == value)
+	{
+		printf("Value checked array[%d] = [%d]\n", i, array[i]);
+		return (i);
+	}
+
+	return (-1);
 }
