@@ -81,11 +81,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	if (list == NULL)
 		return (NULL);
 
-	if ((list->n) == value)
-	{
-		return (list);
-	}
-	while ((next -> n) < value)
+	while ((now -> n) < value)
 	{
 		printf("Value checked array[%lu] = [%d]\n", (next -> index), (next -> n));
 		now = next;
@@ -93,7 +89,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		j += sqrt(size);
 		next = jump(now, j, low);
 		
-		if (j > size || now == NULL)
+		if (j >= size || now == NULL)
 			break;
 	}
 	printf("Value found between indexes[%d] and [%d]\n", low,  min(j, size- 1));
