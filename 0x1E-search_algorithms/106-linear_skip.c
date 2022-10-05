@@ -79,7 +79,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		now = next;
 		next = next -> express;
 		
-		if (next -> index == size)
+		if (next == NULL)
 			break;
 	}
 	printf("Value found between indexes[%d] and [%d]\n", now -> index,  min(next -> index, size- 1));
