@@ -3,6 +3,16 @@
 #include "search_algos.h"
 #include<math.h>
 
+
+int min(int a, int b)
+{
+	if (b > a)
+	    return a;
+	else
+		return b;
+}
+
+
 listint_t *jump(listint_t *list, size_t high, size_t lowt)
 {
 	listint_t *low = list;
@@ -71,23 +81,22 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	if (list == NULL)
 		return (NULL);
 
-	printf("Value checked array[%lu] = [%d]\n", (list -> index), (list -> n));
 	if ((list->n) == value)
 	{
 		return (list);
 	}
 	while ((next -> n) < value)
 	{
+		printf("Value checked array[%lu] = [%d]\n", (next -> index), (next -> n));
 		now = next;
 		low = j;
 		j += sqrt(size);
 		next = jump(now, j, low);
-		printf("Value checked array[%lu] = [%d]\n", (next -> index), (next -> n));
 		
 		if (j >= size || next == NULL)
 			break;
 	}
-	printf("Value found between indexes[%d] and [%ld]\n", low, j);
+	printf("Value found between indexes[%d] and [%ld]\n", low,  min(j, size));
 	now = linear_searc(list, next, value, now);
 	return now;
 }
