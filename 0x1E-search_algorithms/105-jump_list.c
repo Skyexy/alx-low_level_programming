@@ -35,14 +35,14 @@ listint_t *linear_searc(listint_t *list, listint_t *size, int value, listint_t *
 	{
 		return (NULL);
 	}
-	while (ind != size)
+	while (ind->index <= size->index)
 	{
 		printf("Value checked array[%lu] = [%d]\n", ind->index, ind->n);
-		ind = ind -> next;
 		if (ind->n == value)
 		{
 			break;
 		}
+		ind = ind -> next;
 		
 	}
 	if (ind == size)
