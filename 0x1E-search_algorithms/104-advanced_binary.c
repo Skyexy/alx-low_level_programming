@@ -37,7 +37,7 @@ int binary(int *array, int value, int low, int high)
 	if (array[mid] == value)
 	{
 		high = mid - 1;
-		return mid;
+		return binary(array, value, low, high);
 	}
 	if (array[mid] > value)
 		high = mid - 1;
