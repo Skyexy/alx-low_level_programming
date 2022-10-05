@@ -29,7 +29,6 @@ void print_array(int *array, int low, int high)
 int binary(int *array, int value, int low, int high)
 {
 	int mid = low + (high - low + 1) / 2;
-	int ans = -1;
 	int j = -1;
 	
 	print_array(array, low, high);
@@ -37,17 +36,14 @@ int binary(int *array, int value, int low, int high)
 		return (-1);
 	if (array[mid] == value)
 	{
-		ans = mid;
+		j = mid;
 		high = mid - 1;
-		j = binary(array, value, low, high);
 	}
 	if (array[mid] > value)
 		high = mid - 1;
 	else
 		low = mid + 1;
-	j = binary(array, value, low, high);
-	if (ans > -1)
-		return (ans);
+	binary(array, value, low, high);
 	return j;
 }
 
