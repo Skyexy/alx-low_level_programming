@@ -31,9 +31,9 @@ int binary(int *array, int value, int low, int high)
 	int mid = (low + high) / 2;
 	int j = -1;
 	
-	print_array(array, low, high);
 	if (high < low)
 		return (-1);
+	print_array(array, low, high);
 	if (array[mid] == value)
 	{
 		high = mid - 1;
@@ -43,7 +43,7 @@ int binary(int *array, int value, int low, int high)
 		high = mid - 1;
 	else
 		low = mid + 1;
-	j = binary(array, value, low, high);
+	j += binary(array, value, low, high);
 	return j;
 }
 
