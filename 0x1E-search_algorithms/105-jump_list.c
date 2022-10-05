@@ -3,6 +3,21 @@
 #include "search_algos.h"
 #include<math.h>
 
+listint_t *jump(listint_t *list, size_t high, size_t lowt)
+{
+	listint_t low = list;
+	int j = lowt;
+	
+	while (j < high)
+	{
+		if (low == NULL)
+			return (NULL);
+		low = low -> next;
+		j++
+	}
+	return low;
+}
+
 /**
  * linear_search - searches for a value in an array of integers
  * @array: a pointer to the first element of the array
@@ -47,8 +62,10 @@ listint_t *linear_searc(listint_t *list, size_t size, int value, size_t low)
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	listint_t low = list;
+	listint_t now = list;
+	listint_t next;
 	int j = sqrt(size);
+	int low;
 	
 	if (list == NULL)
 	{
@@ -59,14 +76,17 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	{
 		return (list);
 	}
-	while ((low+j)->n < value)
+	while ((now)->n < value)
 	{
-		printf("Value checked array[%d] = [%d]\n", (low+j)->index, (low+j)->n);
-		low = low + j;
+		next = jump(listint_t now, j, low);
+		now = next;
+		low = j;
 		j += sqrt(size);
-		if (j >= size || low == NULL)
+		printf("Value checked array[%d] = [%d]\n", now->index, now->n);
+		
+		if (j >= size || next == NULL)
 			break;
 	}
-	printf("Value found between indexes[%d] and [%ld]\n", low->index, j);
+	printf("Value found between indexes[%d] and [%ld]\n", low, j);
 	return linear_searc(list, j, value, low->index);
 }
