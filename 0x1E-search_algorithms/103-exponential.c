@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include "search_algos.h"
 
+int binary_search_recursive(int *array, int low, int high, int value);
+void print_array(int *array, unsigned int start, unsigned int end);
+
 /**
  * exponential_search - Search for the value in a sorted array of integers
  * @array: Pointer to the first element of the array to search
