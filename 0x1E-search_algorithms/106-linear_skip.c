@@ -79,7 +79,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		now = next;
 		next = next -> express;
 		
-		if (next -> next == NULL)
+		if (next -> express == NULL)
 			break;
 	}
 	printf("Value checked array[%lu] = [%d]\n", (next -> index), (next -> n));
