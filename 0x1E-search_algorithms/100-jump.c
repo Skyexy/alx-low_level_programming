@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "search_algos.h"
+#include <math.h>
+
 /**
  * jump_search - Search for the value in an array of integers
  * @array: Pointer to the first element of the array to search
