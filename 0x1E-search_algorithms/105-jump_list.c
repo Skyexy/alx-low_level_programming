@@ -74,7 +74,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	listint_t *now = list;
 	listint_t *next ;
 	size_t j = sqrt(size);
-	int low;
+	int low = 0;
 	
 	next = jump(now, j, 0);
 	
@@ -93,7 +93,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		j += sqrt(size);
 		next = jump(now, j, low);
 		
-		if (j >= size || now == NULL)
+		if (j > size || now == NULL)
 			break;
 	}
 	printf("Value found between indexes[%d] and [%d]\n", low,  min(j, size- 1));
