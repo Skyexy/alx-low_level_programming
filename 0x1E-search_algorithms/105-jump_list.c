@@ -96,7 +96,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		if (j >= size || next == NULL)
 			break;
 	}
-	printf("Value found between indexes[%d] and [%ld]\n", low,  min(j, size));
+	printf("Value found between indexes[%d] and [%d]\n", low,  min(j, size));
 	now = linear_searc(list, next, value, now);
 	return now;
 }
